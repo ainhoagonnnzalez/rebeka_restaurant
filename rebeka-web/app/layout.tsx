@@ -41,16 +41,16 @@ export default function RootLayout({
           {/* LOGO */}
           <Link
             href="/"
-            className={`${cormorant.className} text-3xl font-semibold tracking-wide`}
+            className={`${cormorant.className} text-3xl text-[#5B0014] font-semibold tracking-wide`}
           >
             REBEKA
           </Link>
 
           {/* ENLACES */}
-          <div className="hidden gap-8 text-sm uppercase tracking-[0.2em] md:flex">
+          <div className="hidden gap-8 text-sm uppercase tracking-[0.2em] md:flex text-[#5B0014]">
             <Link href="/">Inicio</Link>
             <Link href="/menu">Menu</Link>
-            <Link href="/sobre-nosotros">Sobre nosotros</Link>
+            <Link href="/servicios">Sobre nosotros</Link>
             <Link href="/contacto">Contacto</Link>
           </div>
         </nav>

@@ -36,7 +36,7 @@ export default function Home() {
           {/* IZQUIERDA (TÍTULO) */}
           <div className="max-w-xl">
             <h1
-              className={`${cormorant.className} text-5xl font-semibold leading-[0.9] tracking-tight text-white md:text-7xl`}
+              className={`${cormorant.className} text-5xl font-semibold leading-[0.9] tracking-tight text-[#F5F1EA] md:text-7xl`}
             >
               REBEKA
               <br />
