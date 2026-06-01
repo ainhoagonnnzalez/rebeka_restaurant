@@ -85,21 +85,21 @@ export default function Servicios() {
 
           <div className="grid grid-cols-2 gap-4">
             <Image
-              src="/images/food1.jpg"
+              src="/images/food6.jpg"
               alt="Plato mediterráneo"
               width={500}
               height={500}
               className="h-64 w-full object-cover"
             />
             <Image
-              src="/images/food2.jpg"
+              src="/images/food8.jpg"
               alt="Comida mediterránea"
               width={500}
               height={500}
               className="h-64 w-full object-cover"
             />
             <Image
-              src="/images/higos.jpg"
+              src="/images/food3.jpg"
               alt="Ingredientes mediterráneos"
               width={500}
               height={500}
