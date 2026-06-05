@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Counter from "./components/Counter";
 
 /* TIPOGRAFÍA  */
 import { Cormorant_Garamond } from "next/font/google";
@@ -81,6 +82,62 @@ export default function Home() {
           </div>
         </div>
       </section>
+      {/* ================= PRESENTACIÓN ================= */}
+<section className="bg-[#f5f1ea] px-6 py-24 md:px-12 lg:px-24">
+  <div className="mx-auto grid max-w-7xl grid-cols-1 gap-20 md:grid-cols-2">
+
+    {/* IZQUIERDA */}
+    <div>
+      <h2
+        className={`${cormorant.className} text-5xl leading-[0.9] text-[#1A1A1A] md:text-7xl`}
+      >
+        Bienvenidos a
+        <br />
+        Restaurante Rebeka
+      </h2>
+    </div>
+
+    {/* DERECHA */}
+    <div>
+      <p className="text-lg leading-relaxed text-[#6B6B6B]">
+        En Restaurante Rebeka ofrecemos una experiencia gastronómica
+        mediterránea única, con desayunos, un menú diario elaborado con
+        producto fresco y una propuesta culinaria pensada para disfrutar
+        de los sabores auténticos de nuestra tierra.
+      </p>
+
+      {/* ESTADÍSTICAS */}
+      <div className="mt-16 flex gap-16">
+
+        <div>
+          <h3
+            className={`${cormorant.className} text-6xl text-[#5B0014] md:text-7xl`}
+          >
+            <Counter target={150} />+
+          </h3>
+
+          <p className="mt-2 text-[#6B6B6B]">
+            Clientes satisfechos
+          </p>
+        </div>
+
+        <div>
+          <h3
+            className={`${cormorant.className} text-6xl text-[#5B0014] md:text-7xl`}
+          >
+            <Counter target={15} />
+          </h3>
+
+          <p className="mt-2 text-[#6B6B6B]">
+            Años de experiencia
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
 
       {/* ================= IMAGEN GRANDE ================= */}
       <section className="bg-[#f5f1ea]">
@@ -93,6 +150,125 @@ export default function Home() {
         />
       </section>
 
+      {/*===================== NUESTROS SERVICIOS ====================== */}
+      <section className="bg-[#f5f1ea] px-6 py-24 md:px-16 lg:px-24">
+
+  <div className="mx-auto max-w-6xl text-center">
+
+    <h2
+      className={`${cormorant.className} text-5xl text-[#5B0014] md:text-7xl`}
+    >
+      Nuestros Servicios
+    </h2>
+
+    <p className="mx-auto mt-6 max-w-2xl text-[#6B6B6B]">
+      Cocina mediterránea, desayunos y catering para cualquier ocasión.
+    </p>
+
+  </div>
+
+  <div className="mx-auto mt-20 grid max-w-6xl gap-8 md:grid-cols-3">
+
+    {/* CARD 1 */}
+    <div className="bg-white">
+      <Image
+        src="/images/desayuno.jpg"
+        alt=""
+        width={600}
+        height={400}
+        className="h-[280px] w-full object-cover"
+      />
+
+      <div className="p-8">
+        <h3 className={`${cormorant.className} text-3xl text-[#5B0014]`}>
+          Desayunos
+        </h3>
+
+        <p className="mt-4 text-[#6B6B6B]">
+          Empezar el día con producto fresco y calidad.
+        </p>
+      </div>
+    </div>
+
+    {/* CARD 2 */}
+    <div className="bg-white">
+      <Image
+        src="/images/menu.jpg"
+        alt=""
+        width={600}
+        height={400}
+        className="h-[280px] w-full object-cover"
+      />
+
+      <div className="p-8">
+        <h3 className={`${cormorant.className} text-3xl text-[#5B0014]`}>
+          Menú Diario
+        </h3>
+
+        <p className="mt-4 text-[#6B6B6B]">
+          Una propuesta mediterránea diferente cada día.
+        </p>
+      </div>
+    </div>
+
+    {/* CARD 3 */}
+    <div className="bg-white">
+      <Image
+        src="/images/catering.jpg"
+        alt=""
+        width={600}
+        height={400}
+        className="h-[280px] w-full object-cover"
+      />
+
+      <div className="p-8">
+        <h3 className={`${cormorant.className} text-3xl text-[#5B0014]`}>
+          Catering
+        </h3>
+
+        <p className="mt-4 text-[#6B6B6B]">
+          Eventos, celebraciones y reuniones especiales.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+      {/* ==================== TESTIMONIOS =================== */}
+      <section className="grid md:grid-cols-2">
+
+  <Image
+    src="/images/food2.jpg"
+    alt=""
+    width={1200}
+    height={900}
+    className="h-full min-h-[500px] object-cover"
+  />
+
+  <div className="flex items-center justify-center bg-[#5B0014] p-16 text-center">
+
+    <div className="max-w-lg">
+
+      <p className="mb-8 text-white text-xl">
+        ★★★★★
+      </p>
+
+      <p
+        className={`${cormorant.className} text-3xl leading-relaxed text-white`}
+      >
+        "La comida mediterránea es deliciosa y el servicio siempre es excepcional."
+      </p>
+
+      <p className="mt-8 uppercase tracking-[0.2em] text-white/70">
+        María López
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
       {/* ================= CINTA DECORATIVA ================= */}
       <section className="overflow-hidden border-y border-black bg-[#f5f1ea] py-4">
         <div className="whitespace-nowrap text-center text-sm uppercase tracking-[0.2em] text-black">
@@ -154,6 +330,110 @@ export default function Home() {
         </div>
 
       </section>
+      
+      {/* ================= FOOTER ================= */}
+<footer className="bg-[#F5F1EA] px-6 py-16 md:px-16 lg:px-24">
+
+  <div className="mx-auto max-w-7xl border-t border-[#5B0014]/15 pt-16">
+
+    <div className="grid grid-cols-1 gap-16 md:grid-cols-3">
+
+      {/* COLUMNA 1 */}
+      <div>
+
+        <h3
+          className={`${cormorant.className} text-4xl font-semibold text-[#5B0014]`}
+        >
+          Rebeka
+        </h3>
+
+        <p className="mt-5 max-w-xs text-base leading-relaxed text-[#6B6B6B]">
+          Cocina mediterránea elaborada con producto fresco y una atención cercana.
+        </p>
+
+        <div className="mt-8 flex gap-6 text-3xl text-[#5B0014]">
+          <a href="#">f</a>
+          <a href="#">◎</a>
+          <a href="#">♪</a>
+          <a href="#">𝕏</a>
+        </div>
+
+      </div>
+
+      {/* COLUMNA 2 */}
+      <div>
+
+        <h4
+          className={`${cormorant.className} text-3xl font-semibold text-[#5B0014]`}
+        >
+          Contacto
+        </h4>
+
+        <div className="mt-5 space-y-2 text-base text-[#6B6B6B]">
+
+          <p>+34 933 099 241</p>
+
+          <p>newvida1929@gmail.com</p>
+
+        </div>
+
+      </div>
+
+      {/* COLUMNA 3 */}
+      <div>
+
+        <h4
+          className={`${cormorant.className} text-3xl font-semibold text-[#5B0014]`}
+        >
+          Catering y novedades
+        </h4>
+
+        <p className="mt-5 text-base text-[#6B6B6B]">
+          Déjanos tu correo y te contactaremos.
+        </p>
+
+        <input
+          type="email"
+          placeholder="Tu correo electrónico"
+          className="mt-5 w-full rounded-full border border-[#5B0014]/20 bg-white px-5 py-3 text-[#1A1A1A] outline-none placeholder:text-gray-400"
+        />
+
+        <button className="mt-4 w-full rounded-full bg-[#5B0014] px-5 py-3 text-sm uppercase tracking-[0.15em] text-[#F5F1EA] transition hover:bg-[#450010]">
+          Enviar
+        </button>
+
+      </div>
+
+    </div>
+
+    {/* LÍNEA INFERIOR */}
+    <div className="mt-14 border-t border-[#5B0014]/15 pt-6">
+
+      <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+
+        <p className="text-sm text-[#6B6B6B]">
+          © 2025 Rebeka Restaurante. Todos los derechos reservados.
+        </p>
+
+        <div className="flex gap-6 text-sm uppercase tracking-[0.15em] text-[#5B0014]">
+
+          <Link href="/">Inicio</Link>
+
+          <Link href="/menu">Menú</Link>
+
+          <Link href="/servicios">Sobre nosotros</Link>
+
+          <Link href="/contacto">Contacto</Link>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
 
       
     </>
